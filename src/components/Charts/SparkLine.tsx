@@ -5,43 +5,47 @@ import {
   SparklineTooltip,
 } from "@syncfusion/ej2-react-charts";
 
-const SparkLine = ({
-  currentColor,
-  id,
-  type,
-  height,
-  width,
-  data,
-  color,
-}: {
+interface ISparkline {
   currentColor: string;
   id: string;
   type: "Line" | "Column" | "WinLoss" | "Pie" | "Area" | undefined;
   height: string;
   width: string;
-  data: {
-    x: number;
-    yval: number;
-  }[];
+  data: { x: number; yval: number }[];
   color: string;
-}) => {
-  return (
-    <SparklineComponent
-      id={id}
-      height={height}
-      width={width}
-      lineWidth={1}
-      valueType="Numeric"
-      fill={color}
-      border={{ color: currentColor, width: 2 }}
-      dataSource={data}
-      xName="x"
-      yName="yval"
-      type={type}
-    >
-      <Inject services={[SparklineTooltip]} />
-    </SparklineComponent>
-  );
-};
+}
+
+class SparkLine extends React.PureComponent<ISparkline> {
+  render() {
+    const { currentColor, id, type, height, width, data, color } = this.props;
+
+    return (
+      <SparklineComponent
+        id={id}
+        height={height}
+        width={width}
+        lineWidth={1}
+        valueType="Numeric"
+        fill={color}
+        border={{ color: currentColor, width: 2 }}
+        tooltipSettings={{
+          visible: true,
+          // eslint-disable-next-line no-template-curly-in-string
+          format: "${x} : data ${yval}",
+          trackLineSettings: {
+            visible: true,
+          },
+        }}
+        markerSettings={{ visible: ["All"], size: 2.5, fill: currentColor }}
+        dataSource={data}
+        xName="x"
+        yName="yval"
+        type={type}
+      >
+        <Inject services={[SparklineTooltip]} />
+      </SparklineComponent>
+    );
+  }
+}
 
 export default SparkLine;

@@ -47,25 +47,26 @@ const Navbar = () => {
     handleClick,
     setScreenSize,
     screenSize,
+    currentColor,
   } = useStateContext();
 
-  // useEffect(() => {
-  //   const handleResize = () => setScreenSize(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => setScreenSize(window.innerWidth);
 
-  //   window.addEventListener("resize", handleResize);
-  //   handleResize();
-  //   return () => window.removeEventListener("resize", handleResize);
-  // }, []);
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
-  // useEffect(() => {
-  //   if (screenSize) {
-  //     if (screenSize <= 900) {
-  //       setActiveMenu(false);
-  //     } else {
-  //       setActiveMenu(true);
-  //     }
-  //   }
-  // }, [screenSize]);
+  useEffect(() => {
+    if (screenSize) {
+      if (screenSize <= 900) {
+        setActiveMenu(false);
+      } else {
+        setActiveMenu(true);
+      }
+    }
+  }, [screenSize]);
 
   return (
     <div className="flex justify-between p-2 md:mx-6 relative">
@@ -74,7 +75,7 @@ const Navbar = () => {
         customFunc={() => {
           setActiveMenu(!activeMenu);
         }}
-        color="blue"
+        color={currentColor}
         icon={<AiOutlineMenu />}
       />
       <div className="flex">
@@ -83,7 +84,7 @@ const Navbar = () => {
           customFunc={() => {
             handleClick("cart");
           }}
-          color="blue"
+          color={currentColor}
           icon={<FiShoppingCart />}
         />
         <NavButton
@@ -91,7 +92,7 @@ const Navbar = () => {
           customFunc={() => {
             handleClick("chat");
           }}
-          color="blue"
+          color={currentColor}
           icon={<BsChatLeft />}
           dotColor="#03c9d7"
         />
@@ -100,7 +101,7 @@ const Navbar = () => {
           customFunc={() => {
             handleClick("notification");
           }}
-          color="blue"
+          color={currentColor}
           icon={<RiNotification3Line />}
           dotColor="#03c9d7"
         />

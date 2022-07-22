@@ -12,7 +12,6 @@ import {
   ColorPicker,
   Customers,
   Ecommerce,
-  Editor,
   Employees,
   Financial,
   Kanban,
@@ -21,11 +20,12 @@ import {
   Pyramid,
   Stacked,
 } from "./pages";
-import { Navbar, Sidebar } from "./components";
+import { Navbar, Sidebar, ThemeSettings } from "./components";
 import { useStateContext } from "./contexts/ContextProvider";
 
 const App = () => {
-  const { activeMenu } = useStateContext();
+  const { activeMenu, themeSettings, setThemeSettings, currentColor } =
+    useStateContext();
   return (
     <div>
       <BrowserRouter>
@@ -35,7 +35,8 @@ const App = () => {
               <button
                 type="button"
                 className="text-3xl p-3 hover:drop-shadow-xl hover:bg-light-gray text-white"
-                style={{ background: "blue", borderRadius: "50%" }}
+                style={{ background: currentColor, borderRadius: "50%" }}
+                onClick={() => setThemeSettings(true)}
               >
                 <FiSettings />
               </button>
@@ -61,6 +62,8 @@ const App = () => {
             </div>
 
             <div>
+              {themeSettings && <ThemeSettings />}
+
               <Routes>
                 <Route path="/" element={<Ecommerce />} />
                 <Route path="/ecommerce" element={<Ecommerce />} />
@@ -68,9 +71,9 @@ const App = () => {
                 <Route path="/employees" element={<Employees />} />
                 <Route path="/customers" element={<Customers />} />
                 <Route path="/kanban" element={<Kanban />} />
-                <Route path="/editor" element={<Editor />} />
-                <Route path="/calender" element={<Calendar />} />
-                <Route path="/color-pciker" element={<ColorPicker />} />
+
+                <Route path="/calendar" element={<Calendar />} />
+                <Route path="/color-picker" element={<ColorPicker />} />
                 <Route path="/line" element={<Line />} />
                 <Route path="/area" element={<Area />} />
                 <Route path="/bar" element={<Bar />} />

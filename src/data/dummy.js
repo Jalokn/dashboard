@@ -549,10 +549,7 @@ export const links = [
         name: "kanban",
         icon: <BsKanban />,
       },
-      {
-        name: "editor",
-        icon: <FiEdit />,
-      },
+
       {
         name: "color-picker",
         icon: <BiColorFill />,
@@ -3076,13 +3073,13 @@ export const stackedCustomSeries = [
 ];
 
 export const stackedPrimaryXAxis = {
+  lineStyle: { width: 0 },
+  interval: 1,
+  labelIntersectAction: "Rotate45",
   majorGridLines: { width: 0 },
   minorGridLines: { width: 0 },
   majorTickLines: { width: 0 },
   minorTickLines: { width: 0 },
-  interval: 1,
-  lineStyle: { width: 0 },
-  labelIntersectAction: "Rotate45",
   valueType: "Category",
 };
 
