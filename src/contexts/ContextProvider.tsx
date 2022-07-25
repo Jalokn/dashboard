@@ -24,6 +24,20 @@ type StateContextType = {
   setColor: (e: React.MouseEvent) => void;
   themeSettings: boolean;
   setThemeSettings: React.Dispatch<React.SetStateAction<boolean>>;
+  setIsClicked: React.Dispatch<
+    React.SetStateAction<{
+      chat: boolean;
+      cart: boolean;
+      userProfile: boolean;
+      notification: boolean;
+    }>
+  >;
+  initalState: {
+    chat: boolean;
+    cart: boolean;
+    userProfile: boolean;
+    notification: boolean;
+  };
 };
 
 const StateContext = createContext({} as StateContextType);
@@ -75,6 +89,8 @@ export const ContextProvider = ({ children }: { children: ReactNode }) => {
         setColor,
         setThemeSettings,
         themeSettings,
+        setIsClicked,
+        initalState,
       }}
     >
       {children}

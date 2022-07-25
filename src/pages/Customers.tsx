@@ -15,6 +15,7 @@ import {
 
 import { customersData, customersGrid } from "../data/dummy";
 import { Header } from "../components";
+import { useStateContext } from "../contexts/ContextProvider";
 
 const Employees = () => {
   return (

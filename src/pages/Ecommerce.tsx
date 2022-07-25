@@ -6,7 +6,7 @@ import { GoPrimitiveDot } from "react-icons/go";
 import { useStateContext } from "../contexts/ContextProvider";
 
 const Ecommerce = () => {
-  const { currentColor } = useStateContext();
+  const { currentColor, currentMode } = useStateContext();
   return (
     <div className="mt-12">
       <div className="flex flex-wrap lg:flex-nowrap justify-center">
