@@ -11,13 +11,9 @@ import {
   DataLabel,
 } from "@syncfusion/ej2-react-charts";
 
-import {
-  barCustomSeries,
-  barPrimaryXAxis,
-  barPrimaryYAxis,
-} from "../../data/dummy";
-import { Header } from "../../components";
-import { useStateContext } from "../../contexts/ContextProvider";
+import { barCustomSeries, barPrimaryXAxis, barPrimaryYAxis } from "data/dummy";
+import { Header } from "components";
+import { useStateContext } from "contexts/ContextProvider";
 
 const Bar = () => {
   const { currentMode } = useStateContext();

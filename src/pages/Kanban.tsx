@@ -4,8 +4,8 @@ import {
 } from "@syncfusion/ej2-react-charts";
 import { KanbanComponent } from "@syncfusion/ej2-react-kanban";
 import React from "react";
-import { Header } from "../components";
-import { kanbanData, kanbanGrid } from "../data/dummy";
+import { Header } from "components";
+import { kanbanData, kanbanGrid } from "data/dummy";
 
 const Kanban = () => {
   return (

@@ -13,8 +13,8 @@ import {
   lineCustomSeries,
   LinePrimaryXAxis,
   LinePrimaryYAxis,
-} from "../../data/dummy";
-import { useStateContext } from "../../contexts/ContextProvider";
+} from "data/dummy";
+import { useStateContext } from "contexts/ContextProvider";
 
 const LineChart = () => {
   const { currentMode } = useStateContext();

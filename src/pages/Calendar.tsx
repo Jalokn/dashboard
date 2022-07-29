@@ -10,8 +10,8 @@ import {
   WorkWeek,
 } from "@syncfusion/ej2-react-schedule";
 import React from "react";
-import { Header } from "../components";
-import { scheduleData } from "../data/dummy";
+import { Header } from "components";
+import { scheduleData } from "data/dummy";
 
 const Calendar = () => {
   return (

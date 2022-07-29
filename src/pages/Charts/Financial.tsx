@@ -16,9 +16,9 @@ import {
   financialChartData,
   FinancialPrimaryXAxis,
   FinancialPrimaryYAxis,
-} from "../../data/dummy";
-import { useStateContext } from "../../contexts/ContextProvider";
-import { Header } from "../../components";
+} from "data/dummy";
+import { useStateContext } from "contexts/ContextProvider";
+import { Header } from "components";
 
 const date1 = new Date("2017, 1, 1");
 

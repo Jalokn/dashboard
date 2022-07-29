@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
-import "./App.css";
+import "App.css";
 import { FiSettings } from "react-icons/fi";
 import {
   Area,
@@ -19,9 +19,9 @@ import {
   Orders,
   Pyramid,
   Stacked,
-} from "./pages";
-import { Navbar, Sidebar, ThemeSettings } from "./components";
-import { useStateContext } from "./contexts/ContextProvider";
+} from "pages";
+import { Navbar, Sidebar, ThemeSettings } from "components";
+import { useStateContext } from "contexts/ContextProvider";
 
 const App = () => {
   const {

@@ -9,12 +9,12 @@ import {
   Tooltip,
 } from "@syncfusion/ej2-react-charts";
 import React from "react";
-import { useStateContext } from "../../contexts/ContextProvider";
+import { useStateContext } from "contexts/ContextProvider";
 import {
   stackedCustomSeries,
   stackedPrimaryXAxis,
   stackedPrimaryYAxis,
-} from "../../data/dummy";
+} from "data/dummy";
 
 const Stacked = ({ height, width }: { height: string; width: string }) => {
   const { currentMode } = useStateContext();

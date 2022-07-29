@@ -12,9 +12,9 @@ import {
   areaCustomSeries,
   areaPrimaryXAxis,
   areaPrimaryYAxis,
-} from "../../data/dummy";
-import { useStateContext } from "../../contexts/ContextProvider";
-import { Header } from "../../components";
+} from "data/dummy";
+import { useStateContext } from "contexts/ContextProvider";
+import { Header } from "components";
 
 const LineChart = () => {
   const { currentMode } = useStateContext();

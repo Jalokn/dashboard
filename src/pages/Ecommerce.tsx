@@ -1,9 +1,9 @@
 import React from "react";
-import { Button, SparkLine, Stacked } from "../components";
+import { Button, SparkLine, Stacked } from "components";
 
-import { earningData, SparklineAreaData } from "../data/dummy";
+import { earningData, SparklineAreaData } from "data/dummy";
 import { GoPrimitiveDot } from "react-icons/go";
-import { useStateContext } from "../contexts/ContextProvider";
+import { useStateContext } from "contexts/ContextProvider";
 
 const Ecommerce = () => {
   const { currentColor, currentMode } = useStateContext();

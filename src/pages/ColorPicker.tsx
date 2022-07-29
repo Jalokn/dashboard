@@ -1,7 +1,6 @@
 import { ColorPickerComponent } from "@syncfusion/ej2-react-inputs";
 import React from "react";
-import { Header } from "../components";
-import { useStateContext } from "../contexts/ContextProvider";
+import { Header } from "components";
 
 const change = (args: any) => {
   document.getElementById("preview")!.style.backgroundColor =

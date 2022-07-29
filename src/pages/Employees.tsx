@@ -10,8 +10,8 @@ import {
   Toolbar,
 } from "@syncfusion/ej2-react-grids";
 
-import { employeesData, employeesGrid } from "../data/dummy";
-import { Header } from "../components";
+import { employeesData, employeesGrid } from "data/dummy";
+import { Header } from "components";
 
 const Employees = () => {
   return (

@@ -11,9 +11,9 @@ import {
   AccumulationSelection,
 } from "@syncfusion/ej2-react-charts";
 
-import { PyramidData } from "../../data/dummy";
-import { useStateContext } from "../../contexts/ContextProvider";
-import { Header } from "../../components";
+import { PyramidData } from "data/dummy";
+import { useStateContext } from "contexts/ContextProvider";
+import { Header } from "components";
 
 const Pyramid = () => {
   const { currentMode } = useStateContext();

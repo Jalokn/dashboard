@@ -1,10 +1,10 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { SiShopware } from "react-icons/si";
-import { links } from "../data/dummy";
+import { links } from "data/dummy";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 import { MdOutlineCancel } from "react-icons/md";
-import { useStateContext } from "../contexts/ContextProvider";
+import { useStateContext } from "contexts/ContextProvider";
 const Sidebar = () => {
   const { activeMenu, setActiveMenu, screenSize, currentColor } =
     useStateContext();
